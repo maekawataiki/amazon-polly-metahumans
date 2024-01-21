@@ -28,6 +28,7 @@ DECLARE_LOG_CATEGORY_EXTERN(LogAmazonPollyViseme, Log, All);
 UENUM(BlueprintType)
 enum class EViseme : uint8
 {
+    // Consonants
     Sil UMETA(DisplayName = "Sil"),
     P UMETA(DisplayName = "P"),
     LowerT UMETA(DisplayName = "LowerT"),
@@ -39,6 +40,7 @@ enum class EViseme : uint8
     R UMETA(DisplayName = "R"),
     LowerS UMETA(DisplayName = "LowerS"),
     U UMETA(DisplayName = "U"),
+    // Vowels
     At UMETA(DisplayName = "@"),
     A UMETA(DisplayName = "A"),
     E UMETA(DisplayName = "E"),

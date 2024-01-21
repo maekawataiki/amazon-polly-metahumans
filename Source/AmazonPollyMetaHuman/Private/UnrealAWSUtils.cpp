@@ -19,7 +19,7 @@
 #include "UnrealAWSUtils.h"
 
 Aws::String UnrealAWSUtils::FStringToAwsString(const FString& UnrealString) {
-    return Aws::String(TCHAR_TO_UTF8(UnrealString.GetCharArray().GetData()), UnrealString.Len());
+    return Aws::String(TCHAR_TO_UTF8(*UnrealString));
 }
 
 FString UnrealAWSUtils::AwsStringToFString(const Aws::String& AwsString) {

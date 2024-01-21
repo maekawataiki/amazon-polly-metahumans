@@ -72,6 +72,12 @@ Aws::Polly::Model::VoiceId ToPollyVoiceId(const EVoiceId VoiceId)
         return Aws::Polly::Model::VoiceId::Matthew;
     case EVoiceId::Geraint:
         return Aws::Polly::Model::VoiceId::Geraint;
+    case EVoiceId::Takumi:
+        return Aws::Polly::Model::VoiceId::Takumi;
+    case EVoiceId::Kazuha:
+        return Aws::Polly::Model::VoiceId::Kazuha;
+    case EVoiceId::Tomoko:
+        return Aws::Polly::Model::VoiceId::Tomoko;
     default:
         UE_LOG(LogAmazonPollyVoiceId, Error, TEXT("ToPollyVoiceId: Invalid VoiceId (EVoiceId Index: %d)."), VoiceId);
         return Aws::Polly::Model::VoiceId::NOT_SET;
@@ -115,6 +121,9 @@ Aws::Polly::Model::Engine ToPollyVoiceEngine(const EVoiceId VoiceId)
     case EVoiceId::JoeyNeural:
     case EVoiceId::JustinNeural:
     case EVoiceId::MatthewNeural:
+    case EVoiceId::Takumi:
+    case EVoiceId::Kazuha:
+    case EVoiceId::Tomoko:
         return Aws::Polly::Model::Engine::neural;
     default:
         UE_LOG(LogAmazonPollyVoiceId, Error, TEXT("ToPollyVoiceEngine: Invalid VoiceId (EVoiceId Index: %d)."), VoiceId);

@@ -133,6 +133,7 @@ bool USpeechComponent::SynthesizeAudio(const FString& Text, const EVoiceId Voice
 }
 
 bool USpeechComponent::SynthesizeVisemes(const FString& Text, const EVoiceId VoiceId) {
+    UE_LOG(LogPollyMsg, Display, TEXT("%s, %s"), *Text, *AwsStringToFString(FStringToAwsString(Text)));
     PollyOutcome PollyVisemeOutcome = MyPollyClient->SynthesizeSpeech(CreatePollyVisemeRequest(Text, VoiceId));
     if (PollyVisemeOutcome.IsSuccess) {
         FScopeLock lock(&Mutex);
@@ -190,6 +191,7 @@ void USpeechComponent::GenerateVisemeEvents(FString VisemeJson) {
             CurrentVisemeEvent.Viseme = GetVisemeValueFromString(JsonParsed->GetStringField("value"));
             CurrentVisemeEvent.TimeMilliseconds = JsonParsed->GetIntegerField("time");
             VisemeEventArray.Add(CurrentVisemeEvent);
+            UE_LOG(LogPollyMsg, Display, TEXT("%d, %d"), CurrentVisemeEvent.Viseme, CurrentVisemeEvent.TimeMilliseconds);
         }
         else {
             UE_LOG(LogPollyMsg, Error, TEXT("Failed to parse json formatted viseme sequence returned by Amazon Polly."));

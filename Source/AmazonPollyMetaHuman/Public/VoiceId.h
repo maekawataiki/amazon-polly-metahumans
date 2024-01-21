@@ -57,7 +57,10 @@ enum class EVoiceId : uint8
     JustinNeural UMETA(DisplayName = "Justin (Neural, Male Child, English, US)"),
     Matthew UMETA(DisplayName = "Matthew (Standard, Male, English, US)"),
     MatthewNeural UMETA(DisplayName = "Matthew (Neural, Male, English, US)"),
-    Geraint UMETA(DisplayName = "Geraint (Standard, Male, English, Welsh)")
+    Geraint UMETA(DisplayName = "Geraint (Standard, Male, English, Welsh)"),
+    Takumi UMETA(DisplayName = "Takumi (Neural, Male, Japanese, Japan)"),
+    Kazuha UMETA(DisplayName = "Kazuha (Neural, Female, Japanese, Japan)"),
+    Tomoko UMETA(DisplayName = "Tomoko (Neural, Female, Japanese, Japan)")
 };
 
 /**

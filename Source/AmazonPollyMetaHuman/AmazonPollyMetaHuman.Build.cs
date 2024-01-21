@@ -34,6 +34,7 @@ public class AmazonPollyMetaHuman : ModuleRules
         "aws-c-io",
         "aws-c-mqtt",
         "aws-c-s3",
+        "aws-c-sdkutils",
         "aws-checksums",
         "aws-cpp-sdk-core",
         "aws-cpp-sdk-polly",

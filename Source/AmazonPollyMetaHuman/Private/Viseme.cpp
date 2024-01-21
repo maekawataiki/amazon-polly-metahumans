@@ -48,6 +48,8 @@ EViseme GetVisemeValueFromString(const FString& String)
         {TEXT("E"),EViseme::E},
         {TEXT("o"),EViseme::LowerO},
         {TEXT("O"),EViseme::O},
+        {TEXT("B"),EViseme::F},
+        {TEXT("J"),EViseme::I},
         {TEXT("sil"),EViseme::Sil} 
     };
     auto Viseme = VisemeMap.Find(String);
